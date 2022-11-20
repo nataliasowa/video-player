@@ -65,3 +65,13 @@ video {
     width: 60%;
     accent-color: #ff0000;
 }
+
+.velocity {
+    appearance: none;
+    background: none;
+    color: white;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
