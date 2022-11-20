@@ -75,3 +75,10 @@ video {
     text-align: center;
     font-size: 20px;
 }
+
+.fullscreen-btn {
+    background-color: transparent;
+    fill: none;
+    border: none;
+    color: #ffff;
+}

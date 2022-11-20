@@ -3,11 +3,14 @@ import "./App.css";
 import video from "./assets/video.mp4";
 import PlayerButton from "./components/PlayerButton";
 import MuteButton from "./components/MuteButton";
+import SpeedButton from "./components/SpeedButton";
+import FullscreenButton from "./components/FullscreenButton";
 import { FaPlay } from "react-icons/fa";
 import { FaPause } from "react-icons/fa";
 import { FaVolumeMute } from "react-icons/fa";
 import { GoUnmute } from "react-icons/go";
-import SpeedButton from "./components/SpeedButton";
+import { FaExpand } from "react-icons/fa";
+import { FaCompress } from "react-icons/fa";
 
 function App() {
   const videoRef = useRef(null);
@@ -15,6 +18,8 @@ function App() {
   const { toggleMute, isMuted, volume, changeVideoVolume } =
     MuteButton(videoRef);
   const { speed, handleVideoSpeed } = SpeedButton(videoRef);
+  const { isFullscreen, makeFullscreen, closeFullscreen } =
+    FullscreenButton(videoRef);
   return (
     <div className="container">
       <div className="video-wrapper">
@@ -66,11 +71,20 @@ function App() {
                 <option value="1.25">1.25x</option>
                 <option value="2">2x</option>
               </select>
-              <button>FULLSCREEN</button>
+              <button
+                onClick={isFullscreen ? closeFullscreen : makeFullscreen}
+                className="fullscreen-btn"
+              >
+                {isFullscreen ? (
+                  <FaCompress size={25} />
+                ) : (
+                  <FaExpand size={25} />
+                )}
+              </button>
             </div>
           </div>
         </div>
-      </div>{" "}
+      </div>
     </div>
   );
 }
