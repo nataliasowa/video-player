@@ -52,3 +52,16 @@ video {
     border: none;
     color: #ffff;
 }
+
+.mute-unmute-btn {
+    background-color: transparent;
+    fill: none;
+    border: none;
+    color: #ffff;
+}
+
+.volume-bar[type="range"] {
+    height: 20px;
+    width: 60%;
+    accent-color: #ff0000;
+}
