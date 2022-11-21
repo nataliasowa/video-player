@@ -1,16 +1,17 @@
 body {
-    background: grey;
+    background: #EEEEEE
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 98vh;
 }
 
 p {
     color: white;
+    font-size: 20px
 }
 
 video {
@@ -73,7 +74,7 @@ video {
     outline: none;
     border: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .fullscreen-btn {
